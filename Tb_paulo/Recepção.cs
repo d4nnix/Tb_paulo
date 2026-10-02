@@ -8,12 +8,12 @@ namespace Tb_paulo
 {
     internal class Recepção
     {
-        public int id { get; set; }
+        public string Paciente { get; set; }
 
-        public string nome { get; set; }
+        public string Consulta { get; set; }
 
-        public string email { get; set; }
+        public double Especialidade { get; set; }
 
-        public DateTime data_nasc { get; set; }
+        public double Preco { get; set; }
     }
 }
