@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Tb_paulo
 {
-    class Necroterio
+    public class Necroterio
     {
-
+        public int id { get; set;}
     }
 }
