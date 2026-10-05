@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tb_paulo
+namespace Tb_paulo.Dominio
 {
     public  class Necroterio
     {
