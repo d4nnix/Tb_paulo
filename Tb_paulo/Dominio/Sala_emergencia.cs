@@ -8,7 +8,7 @@ namespace Tb_paulo.Dominio
 {
     public class Sala_emergencia
     {
-        public string pacientes {  get; set; }
+        public string paciente {  get; set; }
 
         public int salascirurgia { get;   set; } 
         
