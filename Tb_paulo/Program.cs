@@ -1,16 +1,15 @@
-﻿//// See https://aka.ms/new-console-template for more information
-//Console.Write("Hello peoplle ");
-//Console.WriteLine("im Verity! Your personal helper friend!");
-
-
-using Tb_paulo.Servicos;
-
+﻿using Tb_paulo.Servicos;
 
 Console.WriteLine("Paciente: ");
-string pacientes = Console.ReadLine();
-Console.WriteLine("Sala de cirurgia: ");
-int salascirurgia = int.Parse(Console.ReadLine());
-Console.WriteLine("A ferramenta a ser utilizada: ");
-string ferramentas = Console.ReadLine();
+string Paciente = Console.ReadLine();
 
-Sala_emergenciaServic.Listar();
+Console.WriteLine("Consulta: ");
+string Consulta = Console.ReadLine();
+
+Console.WriteLine("Especialidade: ");
+string Especialidade = Console.ReadLine();
+
+Console.WriteLine("Preçp: ");
+string preco = Console.ReadLine();
+
+RecepcaoService.Listar();
