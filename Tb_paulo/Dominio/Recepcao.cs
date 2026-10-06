@@ -12,7 +12,7 @@ namespace Tb_paulo.Dominio
 
         public string Consulta { get; set; }
 
-        public double Especialidade { get; set; }
+        public string Especialidade { get; set; }
 
         public double Preco { get; set; }
     }
