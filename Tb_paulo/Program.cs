@@ -3,11 +3,11 @@ using Tb_paulo.Servicos;
 RecepcaoService.Listar();
 
 Console.WriteLine("Paciente: ");
-string paciente = Console.ReadLine();
+string Paciente = Console.ReadLine();
 Console.WriteLine("Consulta: ");
-string consulta = Console.ReadLine();
+string Consulta = Console.ReadLine();
 Console.WriteLine("Especialidade: ");
-string especialidade = Console.ReadLine();
+string Especialidade = Console.ReadLine();
 Console.WriteLine("Preçp: ");
 string preco = Console.ReadLine();
 RecepcaoService.Listar();
