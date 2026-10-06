@@ -33,7 +33,7 @@ namespace Tb_paulo.Servicos
                new Sala_emergencia(){ Id=4,pacientes="Pedro",salascirurgia=4, ferramentas= "Porta-agulhas"},
                new Sala_emergencia(){ Id=5,pacientes="Julio",salascirurgia=5, ferramentas= "Agulhas cirúrgicas" },
                };
-        public static void Adicionar(string nome
+        public static void Listar(string nome
             , int num
             , string ferramenta)
         {
