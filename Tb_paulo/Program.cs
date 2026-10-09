@@ -44,7 +44,6 @@ opacao = char.Parse(Console.ReadLine());
 if (opacao == 'S' || opacao == 's')
 {
     Console.WriteLine("Escreva a nova ID em segida digite as novas informaçoes");
-    Id = int.Parse(Console.ReadLine());
     Console.WriteLine("Agora digite o nome");
     novoNome = Console.ReadLine();
     Console.WriteLine("Agora digite o Email");
