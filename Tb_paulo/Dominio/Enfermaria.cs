@@ -8,8 +8,10 @@ namespace Tb_paulo.Dominio
 {
     public class Enfermaria
     {
-        public string remédios { get; set;}
+        public int id { get; set; }
+        public string pacientes{ get; set;}
         public int leitos { get; set;}
+        
         public string prontuários { get; set; }
         
     }
