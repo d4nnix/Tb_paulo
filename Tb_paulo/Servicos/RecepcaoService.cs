@@ -77,13 +77,13 @@ namespace Tb_paulo.Servicos
             Recepção p = Recepção.Find(recepção => recepção.Id == id);
             if (p != null)
             {
-                
+                Recepção.Add(p);
+                Listar();
             }
             else
             {
                 Console.WriteLine("Usuário não encontrado.");
             }
-            Listar();
         }
     }
 }
