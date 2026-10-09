@@ -20,8 +20,8 @@ namespace Tb_paulo.Servicos
     //{
     //    Console.WriteLine(i);
     //}
-   
-    internal class Sala_emergenciaServic
+
+    internal class Sala_emergenciaServic3w
     {
 
         public static List<Sala_emergencia> Salas { get; set; }
@@ -47,11 +47,30 @@ namespace Tb_paulo.Servicos
         }
         public static void Listar()
         {
-           
+
             foreach (Sala_emergencia item in Salas)
             {
                 Console.WriteLine(item.pacientes);
             }
         }
+
+    //    public static void Remover(int id)
+    //    {
+    //        Sala p = Salas.Find(pessoa => pessoa.Id == id);
+    //        if (p != null)
+    //        {
+    //            Salas.Remove(p);
+    //            Listar();
+    //        }
+    //        else
+    //        {
+    //            Console.WriteLine("Sistema não conseguiu encontrar o usuario");
+    //        }
+    //    }
+    //    public static void Editar(int id, string novoNome, string novoEmail, DateTime novaDataNascimento)
+    //    {
+    //        Sala p = Sala.Find(Sala => Sala.Id == id);
+    //    }
+
     }
 }
