@@ -54,3 +54,6 @@ else
 {
     Console.WriteLine("Nenhum falecido sera adicionado");
 }
+
+
+//MenuView.IniciarSistema();
