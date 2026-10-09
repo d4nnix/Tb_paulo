@@ -10,5 +10,8 @@ namespace Tb_paulo.Dominio
     {
         public int Id { get; set; }
         public string pacientes { get; set; }
-         public int salascirurgia { get;   set; } 
+        public int salascirurgia { get; set; }
+
+        public string Email { get; set; }
     }
+}
