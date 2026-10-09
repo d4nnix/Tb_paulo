@@ -14,15 +14,14 @@ namespace Tb_paulo.Servicos
          = new List<EPacientes>()
          {
                new EPacientes(){ Id=1,pacientes="Paulo",Email ="sshfb@gmail.com",salascirurgia=1},
-               new EPacientes(){ Id=2,pacientes="Apolo",Email ="sshfb@gmail.com",salascirurgia=2},
-               new EPacientes(){ Id=3,pacientes="Roberto",Email ="sshfb@gmail.com",salascirurgia=3},
-               new EPacientes(){ Id=4,pacientes="Pedro",Email ="sshfb@gmail.com",salascirurgia=4},
-               new EPacientes(){ Id=5,pacientes="Julio",Email ="sshfb@gmail.com",salascirurgia=5},
-          };
-      
+               new EPacientes(){ Id=2,pacientes="Apolo",Email ="Hunter@gmail.com",salascirurgia=2},
+               new EPacientes(){ Id=3,pacientes="Roberto",Email ="Robet45@gmail.com",salascirurgia=3},
+               new EPacientes(){ Id=4,pacientes="Pedro",Email ="Pedr32@gmail.com",salascirurgia=4},
+         };
+
         public static void Adicionar(string nome
             , string email
-            , int salascirurgia
+            , int nsala
             , DateTime data_nascimento)
         {
             EPacientes pessoa = new EPacientes();
@@ -30,7 +29,7 @@ namespace Tb_paulo.Servicos
            grupos.Count + 1 : 1;
             pessoa.pacientes = nome;
             pessoa.Email = email;
-            pessoa.salascirurgia = num;
+            pessoa.salascirurgia = nsala;
             grupos.Add(pessoa);
             Listar();
         }
@@ -43,17 +42,18 @@ namespace Tb_paulo.Servicos
                 Console.WriteLine(item.pacientes);
                 Console.WriteLine(item.Email);
                 Console.WriteLine(item.salascirurgia);
+                Console.WriteLine("---------------------");
             }
         }
-    }
-        
 
-     public static void Remover(int id)
+
+
+        public static void Remover(int id)
         {
-            EPaciente p = grupos.Find(pessoas => pessoas.Id == id);
+            EPacientes p = grupos.Find(pessoas => pessoas.Id == id);
             if (p != null)
             {
-                EPaciente.Remove(p);
+                grupos.Remove(p);
                 Listar();
             }
             else
@@ -61,14 +61,14 @@ namespace Tb_paulo.Servicos
                 Console.WriteLine("Sistema não conseguiu encontrar o usuario");
             }
         }
-        public static void Editar(int id, string novoNome, string novoEmail, DateTime novaDataNascimento)
+        public static void Editar(int id, string nvpacientes, string novoEmail, int numSala)
         {
-            EPaciente p = grupos.Find(pessoas => pessoas.Id == id);
+            EPacientes p = grupos.Find(pessoas => pessoas.Id == id);
             if (p != null)
             {
-                p.Nome = novoNome;
+                p.pacientes = nvpacientes;
                 p.Email = novoEmail;
-                p.Data_Nascimento = novaDataNascimento;
+                p.salascirurgia = numSala;
                 Listar();
             }
             else
@@ -76,5 +76,19 @@ namespace Tb_paulo.Servicos
                 Console.WriteLine("Sistema não conseguiu encontrar o usuario");
             }
         }
+        public static void BuscarPorId(int id)
+        {
+            EPacientes p = grupos.Find(pesssoa => pesssoa.Id == id);
+            if (p != null)
+            {
+                grupos.Add(p);
+                Listar();
+            }
+            else
+            {
+                Console.WriteLine("Id não encontrado.");
+            }
+        }
+    
     }
 }
