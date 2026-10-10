@@ -9,14 +9,15 @@ namespace Tb_paulo.Servicos
 {
     class EnfermariaService
     {
-        public static List<Enfermaria> enfermarias { get; set; } = new List<Enfermaria>() { 
+        public static List<Enfermaria> enfermarias { get; set; } = new List<Enfermaria>() 
+        { 
            
                 new Enfermaria(){ id=1,pacientes="Joaquim pereira",leitos= 22, prontuários = "acompanhado"},
                  new Enfermaria(){ id=2,pacientes="ana luiza",leitos= 23, prontuários = "nao registrado"},
                   new Enfermaria(){ id=3,pacientes="Gustavo eduardo",leitos= 24, prontuários = " em observacao medica"},
                    new Enfermaria(){ id=4,pacientes="Maria da conceicao evaristo",leitos= 25, prontuários = "em andamentos "},
                     new Enfermaria(){ id=5,pacientes="Eloiza figueiro",leitos= 26, prontuários = "aferido sinais vitais ,coleta de exames"},
-            };
+         };
         public static void Adicionar(string pacientes
             , int leitos  , string prontuarios)
             
@@ -55,21 +56,34 @@ namespace Tb_paulo.Servicos
                 Console.WriteLine("Sistema não conseguiu encontrar o usuario");
             }
         }
-    }  public static void Editar(int id, string novoNome, string novoleito, string novoprontuário)
+   
+        public static void Editar(int id, string novoNome, string novoleito, string novoprontuário)
         {
-            Enfermaria p = enfermarias.Find(pacientes => pacientes.id == id);
-            if (p != null)
+            Enfermaria p= enfermarias.Find(pacientes => pacientes.id == id);
+            if (p!= null)
             {
-               p.nome pacientes = novoNome;
+                p.pacientes= novoNome;
                 p.id = id;
-               
-
                 Listar();
             }
             else
             {
                 Console.WriteLine("Sistema não conseguiu encontrar o usuario");
             }
+        }    
+        public static void BuscarPorId(int id)
+        {
+            Enfermaria p = enfermarias.Find(pacientes=> pacientes.id == id);
+            if (p != null)
+            {
+                enfermarias.Add(p);
+                Listar();
+            }
+            else
+            {
+                Console.WriteLine("Id nao encontrado");
+            }
         }
     }
+}
 
