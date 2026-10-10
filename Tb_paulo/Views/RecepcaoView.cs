@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tb_paulo.Dominio;
 using Tb_paulo.Servicos;
 
 namespace Tb_paulo.Views
@@ -15,9 +16,7 @@ namespace Tb_paulo.Views
             Console.WriteLine("Bem-Vindo ao ");
             Console.WriteLine("Você deseja mexer em qual função?");
             Console.WriteLine("1- Listar");
-            Console.WriteLine("2- Editar");
-            Console.WriteLine("3- Remover");
-            Console.WriteLine("4- Buscar por Id");
+            Console.WriteLine("2- Adicionar");
 
             int opcao = int.Parse(Console.ReadLine());
             if (opcao == 1)
@@ -26,16 +25,18 @@ namespace Tb_paulo.Views
             }
             else if (opcao == 2)
             {
-                RecepcaoService.Editar();
-            }
-            else if (opcao == 3)
-            {
-                RecepcaoService.Remover();
-            }
-            else if (opcao == 3)
-            {
-                RecepcaoService.BuscarPorId();
+               void Adicionar(int Id, string Paciente
+             , string Consulta
+             , string Especialidade, double Preco)
+                {
+                    Recepção recepção = new Recepção();
+                    recepção.Id = Id;
+                    recepção.Paciente = Paciente;
+                    recepção.Consulta = Consulta;
+                    recepção.Especialidade = Especialidade;
+                    recepção.Preco = Preco;
+                }
             }
           }
-        }
-    }
+       }
+   }
