@@ -28,7 +28,7 @@ namespace Tb_paulo.Views
             }
 
         }
-        public static void ImprimirPessoa(int id, string nome, bool ehPrimeiraLinha)
+        public static void ImprimirPessoa(int id, string nome, DateTime data_Falecimento, string Email, bool ehPrimeiraLinha)
         {
             int largura = 30;
 
