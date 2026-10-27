@@ -8,6 +8,7 @@ namespace Tb_paulo.Dominio
 {
     internal class Recepção
     {
+        public int Id { get; set; }
         public string Paciente { get; set; }
 
         public string Consulta { get; set; }
